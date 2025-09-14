@@ -1,0 +1,55 @@
+# Arquivos e diretórios a serem ignorados no build Docker
+
+# Ambiente virtual
+venv/
+env/
+.venv/
+.env/
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Logs
+*.log
+logs/
+
+# Arquivos temporários
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Documentação desnecessária
+*.md
+!README.md
+
+# Scripts de desenvolvimento
+start.sh
+
+# Testes (opcional - remover se quiser incluir)
+test_*.py
+*_test.py
+tests/

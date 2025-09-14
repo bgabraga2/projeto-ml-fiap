@@ -1,0 +1,229 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-09-14T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "req_health_check",
+      "parentId": "fld_ml_api",
+      "modified": 1694649600000,
+      "created": 1694649600000,
+      "url": "{{ _.base_url }}/health",
+      "name": "Health Check",
+      "description": "Verifica o status da API e dos modelos carregados",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1694649600000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_api_info",
+      "parentId": "fld_ml_api",
+      "modified": 1694649600000,
+      "created": 1694649600000,
+      "url": "{{ _.base_url }}/",
+      "name": "API Info",
+      "description": "Retorna informações básicas sobre a API",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1694649590000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_clusterization",
+      "parentId": "fld_ml_api",
+      "modified": 1694649600000,
+      "created": 1694649600000,
+      "url": "{{ _.base_url }}/clusterization",
+      "name": "Clusterização de Clientes",
+      "description": "Segmenta clientes em clusters baseado no comportamento de compra",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"gmv_mean\": 112.86,\n  \"gmv_total\": 1128.58,\n  \"purchase_count\": 10,\n  \"gmv_std\": 69.10,\n  \"tickets_mean\": 1.0,\n  \"tickets_total\": 10,\n  \"tickets_std\": 0.0,\n  \"round_trip_rate\": 1.0,\n  \"weekend_rate\": 0.2,\n  \"preferred_day\": 2,\n  \"avg_hour\": 15.5,\n  \"preferred_month\": 12,\n  \"avg_company_freq\": 25000.0\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1694649580000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_classification",
+      "parentId": "fld_ml_api",
+      "modified": 1694649600000,
+      "created": 1694649600000,
+      "url": "{{ _.base_url }}/classification",
+      "name": "Classificação de Recompra",
+      "description": "Prediz se um cliente irá fazer uma recompra nos próximos 30 dias",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"gmv_ultima_compra\": 79.52,\n  \"tickets_ultima_compra\": 1,\n  \"origem_ultima\": \"10e4e7caf8b078429bb1c80b1a10118ac6f963eff098fd\",\n  \"destino_ultima\": \"e6d41d208672a4e50b86d959f4a6254975e6fb9b088116\",\n  \"empresa_ultima\": \"36ebe205bcdfc499a25e6923f4450fa8d48196ceb4fa0c\",\n  \"dias_desde_ultima_compra\": 666,\n  \"total_compras\": 2,\n  \"dias_unicos_compra\": 2,\n  \"gmv_total\": 162.0,\n  \"gmv_medio\": 81.0,\n  \"gmv_std\": 2.24,\n  \"gmv_min\": 79.52,\n  \"gmv_max\": 82.48,\n  \"tickets_total\": 2,\n  \"tickets_medio\": 1.0,\n  \"tickets_max\": 1,\n  \"mes_preferido\": 5,\n  \"dia_semana_preferido\": 2,\n  \"hora_media\": 15.1,\n  \"hora_std\": 0.0,\n  \"origens_unicas\": 2,\n  \"destinos_unicos\": 2,\n  \"empresas_unicas\": 2,\n  \"intervalo_medio_dias\": 487.0,\n  \"regularidade\": 0.0\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1694649570000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_recommendation",
+      "parentId": "fld_ml_api",
+      "modified": 1694649600000,
+      "created": 1694649600000,
+      "url": "{{ _.base_url }}/recommendation",
+      "name": "Recomendação de Rotas",
+      "description": "Recomenda as 3 melhores rotas baseado no perfil e histórico do cliente",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"fk_contact\": \"37228485e0dc83d84d1bcd1bef3dc632301bf6cb22c8b5\",\n  \"date_purchase\": \"2018-12-05\",\n  \"time_purchase\": \"15:07:57\",\n  \"place_origin_departure\": \"10e4e7caf8b078429bb1c80b1a10118ac6f963eff098fd25a66c78862ae5ebce\",\n  \"place_destination_departure\": \"e6d41d208672a4e50b86d959f4a6254975e6fb9b0881166af52c9fe3b5825de2\",\n  \"place_origin_return\": \"0\",\n  \"place_destination_return\": \"0\",\n  \"fk_departure_ota_bus_company\": \"36ebe205bcdfc499a25e6923f4450fa8d48196ceb4fa0ce077d9d8ec4a36926d\",\n  \"fk_return_ota_bus_company\": \"1\",\n  \"gmv_success\": 155.97,\n  \"total_tickets_quantity_success\": 1,\n  \"route_departure\": \"10e4e7caf8b078429bb1c80b1a10118ac6f963eff098fd25a66c78862ae5ebce_to_e6d41d208672a4e50b86d959f4a6254975e6fb9b0881166af52c9fe3b5825de2\",\n  \"route_return\": \"0_to_0\",\n  \"is_round_trip\": 1,\n  \"departure_company_freq\": 2139,\n  \"return_company_freq\": 1548675,\n  \"origin_dept_freq\": 862,\n  \"dest_dept_freq\": 5,\n  \"route_departure_freq\": 1,\n  \"cluster\": 0\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1694649560000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_ml_api",
+      "parentId": "wrk_ml_api",
+      "modified": 1694649600000,
+      "created": 1694649600000,
+      "name": "ML API Endpoints",
+      "description": "Endpoints da API de Machine Learning - Projeto FIAP",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1694649600000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_ml_api",
+      "parentId": null,
+      "modified": 1694649600000,
+      "created": 1694649600000,
+      "name": "ML API - Projeto FIAP",
+      "description": "Collection para a API de Machine Learning do Projeto FIAP\n\nModelos disponíveis:\n1. Clusterização de Clientes (K-Means)\n2. Classificação de Recompra (30 dias)\n3. Recomendação de Rotas (XGBoost)",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_base",
+      "parentId": "wrk_ml_api",
+      "modified": 1694649600000,
+      "created": 1694649600000,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:3021"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1694649600000,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_production",
+      "parentId": "wrk_ml_api",
+      "modified": 1694649600000,
+      "created": 1694649600000,
+      "name": "Production Environment",
+      "data": {
+        "base_url": "https://your-production-api.com"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url"
+        ]
+      },
+      "color": "#FF6B6B",
+      "isPrivate": false,
+      "metaSortKey": 1694649610000,
+      "_type": "environment"
+    }
+  ]
+}

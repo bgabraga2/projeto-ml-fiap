@@ -1,0 +1,64 @@
+# Arquivos e diretórios a serem ignorados no build Docker
+
+# Ambientes virtuais
+venv/
+env/
+.venv/
+.env/
+new_api/venv/
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Logs
+*.log
+logs/
+new_api/logs/
+
+# Arquivos temporários
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Scripts de desenvolvimento
+new_api/start.sh
+
+# Arquivos de dados grandes (manter apenas os artefatos necessários)
+files/
+pbl-analise.ipynb
+classification.ipynb
+clusterization.ipynb
+recommendation.ipynb
+relatorio_analise.md
+
+# Diretório de importação MySQL
+import_to_mysql/
+
+# Manter apenas os artefatos ML necessários
+dist/*/dataset_*.csv
+dist/*/dataset_*.json
