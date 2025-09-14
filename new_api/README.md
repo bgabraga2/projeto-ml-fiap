@@ -462,4 +462,4 @@ A API implementa tratamento robusto de erros:
 
 ---
 
-**Desenvolvido para o Projeto ML FIAP - 2024**
+**Desenvolvido para o Projeto ML FIAP - 2025**
